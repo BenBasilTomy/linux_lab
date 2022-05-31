@@ -1,17 +1,17 @@
-echo ”enter the number”
-read n
-q=$n
-a=0
-while [ $q – gt 0 ]
-do
-r= `expr $q % 10 `
-
-q= `expr $q / 10 `
-a=`expr $a + $r /* $r /*$r `
+echo "enter the number"
+read a
+s=0
+o=$a
+while [ $o -gt 0 ]
+do  
+r=$(( $o % 10 ))
+o=$(( $o/ 10))
+n=$(( $r*$r*$r))
+s=$(($s+$n))
 done
-if [ $a=$n ]
+if [ $s -eq $a ]
 then
-echo “the number $n is armstrong number”
+echo "armstrong"
 else
-echo “the number $n is not armstrong number”
+echo "not"
 fi
